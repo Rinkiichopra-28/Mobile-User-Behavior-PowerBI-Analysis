@@ -1,0 +1,11 @@
+// Average Screen Time per User
+Avg Screen Time = 
+AVERAGE('Mobile user data'[Screen On Time (hours/day)])
+
+// Battery Drain Rate Category
+Battery Health Status = 
+IF(
+    AVERAGE('Mobile user data'[Battery Drain (mAh/day)]) > 2500,
+    "High Drain",
+    "Normal Drain"
+)
